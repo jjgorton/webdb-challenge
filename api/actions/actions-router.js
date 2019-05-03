@@ -4,16 +4,16 @@ const db = require('./actions-model');
 
 const router = express.Router();
 
-// router.get('/', (req, res) => {
-// 	db
-// 		.get()
-// 		.then((actions) => {
-// 			res.status(200).json(actions);
-// 		})
-// 		.catch((err) => {
-// 			res.status(500).json({ error: 'No!' });
-// 		});
-// });
+router.get('/', (req, res) => {
+	db
+		.get()
+		.then((actions) => {
+			res.status(200).json(actions);
+		})
+		.catch((err) => {
+			res.status(500).json({ error: 'No!' });
+		});
+});
 
 // router.get('/:id', (req, res) => {
 // 	const actionId = req.params.id;
